@@ -121,6 +121,35 @@
 <h3>w14_hw</h3>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JRAAH4KdAjI?si=05T96r2oeXPaVHNT" title="YouTube video player" width="560"></iframe></p>
 <script src="https://gist.github.com/40932134/92fa137bc567b2c4230086626c0ce919.js"></script>
+<h3>w15_hw</h3>
+<p></p>
+<p>w15</p>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
+<h1>w15</h1>
+<p><a href="#addto" onclick="run_addto()">從 1 累加到 100</a></p>
+<script type="text/python">
+        def addto(start, end):
+            total = 0
+            for i in range(start, end + 1):
+                total += i
+            return total
+
+        def run_addto():
+            result = addto(1, 100)
+            print(result)  # 輸出：5050
+    
+</script>
+<div id="result"></div>
+<script>
+        function run_addto() {
+            // 執行 Brython Python 程式碼
+            brython({debug:1});
+            let result = __BRYTHON__.run_script(document.getElementById("addto").text);
+            document.getElementById("result").innerText = "累加結果: " + result;
+        }
+    
+</script>
+<p></p>
 <h1>Brython</h1>
 <p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
