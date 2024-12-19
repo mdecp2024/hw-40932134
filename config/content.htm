@@ -117,10 +117,39 @@
 <p>請在下列圖形中的兩個正方形外圍, 以黑色畫筆畫圓, 並設法在各線條所圍成的封閉區域塗上不同顏色. 操作過程請拍攝影片, 並在頁面中列出作業心得.</p>
 <div id="brython_div1"></div>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/m2fiKdLahxo?si=HblBYQ6YkbHPR-3D" title="YouTube video player" width="560"></iframe></p>
-<h3>心得:實際操作，並了解此程式的語法。</h3>
+<p>心得:實際操作，並了解此程式的語法。</p>
 <h3>w14_hw</h3>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JRAAH4KdAjI?si=05T96r2oeXPaVHNT" title="YouTube video player" width="560"></iframe></p>
 <script src="https://gist.github.com/40932134/92fa137bc567b2c4230086626c0ce919.js"></script>
+<h3>w15_hw</h3>
+<p></p>
+<p>w15</p>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
+<h1>w15</h1>
+<p><a href="#addto" onclick="run_addto()">從 1 累加到 100</a></p>
+<script type="text/python">
+        def addto(start, end):
+            total = 0
+            for i in range(start, end + 1):
+                total += i
+            return total
+
+        def run_addto():
+            result = addto(1, 100)
+            print(result)  # 輸出：5050
+    
+</script>
+<div id="result"></div>
+<script>
+        function run_addto() {
+            // 執行 Brython Python 程式碼
+            brython({debug:1});
+            let result = __BRYTHON__.run_script(document.getElementById("addto").text);
+            document.getElementById("result").innerText = "累加結果: " + result;
+        }
+    
+</script>
+<p></p>
 <h1>Brython</h1>
 <p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
