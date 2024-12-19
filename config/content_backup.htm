@@ -128,7 +128,7 @@
 <h1>w15</h1>
 <p><a href="#addto" onclick="run_addto()">從 1 累加到 100</a></p>
 <script type="text/python">
-        def addto(start, end):
+def addto(start, end):
             total = 0
             for i in range(start, end + 1):
                 total += i
@@ -137,15 +137,81 @@
         def run_addto():
             result = addto(1, 100)
             print(result)  # 輸出：5050
-    
 </script>
 <div id="result"></div>
 <script>
-        function run_addto() {
+function run_addto() {
             // 執行 Brython Python 程式碼
             brython({debug:1});
             let result = __BRYTHON__.run_script(document.getElementById("addto").text);
             document.getElementById("result").innerText = "累加結果: " + result;
+        }
+</script>
+<p></p>
+<p>w15</p>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
+<h1>w15</h1>
+<p><a href="#addto" onclick="run_addto()">addto</a> <!-- 這個連結將執行函式 --></p>
+<div id="result"></div>
+<!-- 顯示結果的區域 -->
+<p></p>
+<!-- Python 程式碼 -->
+<script type="text/python">
+# 定義 addto 函式
+        def addto(start, end):
+            total = 0
+            for i in range(start, end + 1):
+                total += i
+            return total
+
+        # 定義 run_addto 函式，這是點擊連結後執行的函式
+        def run_addto():
+            result = addto(1, 100)  # 執行加總從 1 到 100
+            print(result)  # 在控制台輸出結果
+            document["result"].text = f"從 1 累加到 100 的結果是：{result}"  # 顯示在頁面上
+</script>
+<script>
+// 用於初始化 Brython 以及執行程式碼的功能
+        function run_addto() {
+            // 執行 addto 函式並顯示結果
+            brython();  // 初始化 Brython
+            // 直接調用 Python 中的 run_addto 函式
+            __BRYTHON__.run_script('run_addto()');
+        }
+</script>
+<p></p>
+<p>w15</p>
+<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
+<h1>w15</h1>
+<p><a href="#add_only_even" onclick="run_add_only_even()">add_only_even</a> <!-- 這個連結將執行函式 --></p>
+<div id="result"></div>
+<!-- 顯示結果的區域 -->
+<p></p>
+<!-- Python 程式碼 -->
+<script type="text/python">
+        # 定義 add_only_even 函式
+        def add_only_even(start, end):
+            total = 0
+            # 迭代範圍內的每個數字
+            for i in range(start, end + 1):
+                if i % 2 == 0:  # 判斷是否為偶數
+                    total += i
+            return total
+
+        # 定義 run_add_only_even 函式，這是點擊連結後執行的函式
+        def run_add_only_even():
+            result = add_only_even(1, 100)  # 執行從 1 到 100 的偶數加總
+            print(result)  # 在控制台輸出結果
+            document["result"].text = f"從 1 累加到 100 之間的偶數總和是：{result}"  # 顯示在頁面上
+    
+</script>
+<script>
+        // 用於初始化 Brython 以及執行程式碼的功能
+        function run_add_only_even() {
+            // 執行 add_only_even 函式並顯示結果
+            brython();  // 初始化 Brython
+            // 直接調用 Python 中的 run_add_only_even 函式
+            __BRYTHON__.run_script('run_add_only_even()');
         }
     
 </script>
