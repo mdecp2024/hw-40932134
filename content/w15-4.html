@@ -2,7 +2,7 @@
         <head>
         <title>cp_hw</title>
         <meta charset="utf-8">
-<meta property="head" content="H3">
+<meta property="head" content="H1">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
         <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
@@ -141,10 +141,44 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w15_hw.html'>Next</a> >> w15_hw<br /><h1>w14_hw</h1>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JRAAH4KdAjI?si=05T96r2oeXPaVHNT" title="YouTube video player" width="560"></iframe></p>
-<script src="https://gist.github.com/40932134/92fa137bc567b2c4230086626c0ce919.js"></script>
-<br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='w15_hw.html'>Next</a> >> w15_hw</div>
+    <div id="tipue_search_content">w15-3 << <a href='w15-3.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython<br /><h1>w15-4</h1>
+<p><a href="#add_avoid_8" onclick="run_add_avoid_8()">add_avoid_8</a> <!-- 這個連結將執行函式 --></p>
+<div id="result"></div>
+<!-- 顯示結果的區域 -->
+<p></p>
+<!-- Python 程式碼 -->
+<script type="text/python">
+        # 定義 add_avoid_8 函式
+        def add_avoid_8(start, end):
+            total = 0
+            # 迭代範圍內的每個數字
+            for i in range(start, end + 1):
+                if '8' in str(i):  # 如果數字包含 "8"，則跳過
+                    continue
+                total += i
+            return total
+
+        # 定義 run_add_avoid_8 函式，這是點擊連結後執行的函式
+        def run_add_avoid_8():
+            result = add_avoid_8(1, 100)  # 執行從 1 到 100 的加總，但避開包含 "8" 的數字
+            print(result)  # 在控制台輸出結果
+            document["result"].text = f"從 1 累加到 100，避開包含數字 '8' 的數字後的總和是：{result}"  # 顯示在頁面上
+    
+</script>
+<script>
+        // 用於初始化 Brython 以及執行程式碼的功能
+        function run_add_avoid_8() {
+            // 執行 add_avoid_8 函式並顯示結果
+            brython();  // 初始化 Brython
+            // 直接調用 Python 中的 run_add_avoid_8 函式
+            __BRYTHON__.run_script('run_add_avoid_8()');
+        }
+    
+</script>
+<p></p>
+<p>// ]]&gt;</p>
+<p></p>
+<br />w15-3 << <a href='w15-3.html'>Previous</a> <a href='Brython.html'>Next</a> >> Brython</div>
         
     <!-- footer -->
       <div class="container">
