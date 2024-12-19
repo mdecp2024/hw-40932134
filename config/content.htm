@@ -123,7 +123,6 @@
 <script src="https://gist.github.com/40932134/92fa137bc567b2c4230086626c0ce919.js"></script>
 <h3>w15_hw</h3>
 <p></p>
-<p>w15</p>
 <script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
 <h1>w15</h1>
 <p><a href="https://gist.githubusercontent.com/40932134/6a51ded94789ca77d72cf5d87a43a2ba/raw/1b3306bc4c2e5563dd4aa917fb7581fcf3e1d44d/gistfile1.txt" onclick="run_addto()">從 1 累加到 100</a></p>
@@ -180,7 +179,6 @@ function run_addto() {
         }
 </script>
 <p></p>
-<p>w15</p>
 <script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
 <h1>w15</h1>
 <p><a href="https://gist.githubusercontent.com/40932134/4a602d56724a3341a6e7949b15c2e109/raw/e876e4b03da3dff701625d04c37568ab9cf0ecde/gistfile1.txt" onclick="run_add_only_even()">add_only_even</a> <!-- 這個連結將執行函式 --></p>
@@ -214,7 +212,6 @@ function run_addto() {
         }
 </script>
 <p></p>
-<p>w15</p>
 <script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
 <h1>w15</h1>
 <p><a href="https://gist.githubusercontent.com/40932134/4761ba62b8c7854fd2874602f4e32282/raw/8f7711bac2c3677c7c1aaf08bed38342c6216d0b/gistfile1.txt" onclick="run_add_avoid_8()">add_avoid_8</a> <!-- 這個連結將執行函式 --></p>
@@ -223,7 +220,7 @@ function run_addto() {
 <p></p>
 <!-- Python 程式碼 -->
 <script type="text/python">
-        # 定義 add_avoid_8 函式
+# 定義 add_avoid_8 函式
         def add_avoid_8(start, end):
             total = 0
             # 迭代範圍內的每個數字
@@ -238,10 +235,9 @@ function run_addto() {
             result = add_avoid_8(1, 100)  # 執行從 1 到 100 的加總，但避開包含 "8" 的數字
             print(result)  # 在控制台輸出結果
             document["result"].text = f"從 1 累加到 100，避開包含數字 '8' 的數字後的總和是：{result}"  # 顯示在頁面上
-    
 </script>
 <script>
-        // 用於初始化 Brython 以及執行程式碼的功能
+// 用於初始化 Brython 以及執行程式碼的功能
         function run_add_avoid_8() {
             // 執行 add_avoid_8 函式並顯示結果
             brython();  // 初始化 Brython
@@ -249,7 +245,6 @@ function run_addto() {
             __BRYTHON__.run_script('run_add_avoid_8()');
         }
     
-</script>
 <p></p>
 <p>// ]]&gt;</p>
 <p></p>
@@ -258,9 +253,9 @@ function run_addto() {
 <p><button id="add1to100">1 add to 100</button></p>
 <!-- 導入 brython 程式庫 -->
 <p>
-<script src="/static/brython.js"></script>
+<script src="/static/brython.js">
+</script>
 <script src="/static/brython_stdlib.js"></script>
-</p>
 <!-- 啟動 Brython -->
 <p>
 <script>
