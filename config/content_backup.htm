@@ -122,9 +122,7 @@
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JRAAH4KdAjI?si=05T96r2oeXPaVHNT" title="YouTube video player" width="560"></iframe></p>
 <script src="https://gist.github.com/40932134/92fa137bc567b2c4230086626c0ce919.js"></script>
 <h3>w15_hw</h3>
-<p></p>
-<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
-<h1>w15</h1>
+<p>題目一</p>
 <p><a href="https://gist.githubusercontent.com/40932134/6a51ded94789ca77d72cf5d87a43a2ba/raw/1b3306bc4c2e5563dd4aa917fb7581fcf3e1d44d/gistfile1.txt" onclick="run_addto()">從 1 累加到 100</a></p>
 <script type="text/python">
 def addto(start, end):
@@ -137,86 +135,15 @@ def addto(start, end):
             result = addto(1, 100)
             print(result)  # 輸出：5050
 </script>
-<div id="result"></div>
-<script>
-function run_addto() {
-            // 執行 Brython Python 程式碼
-            brython({debug:1});
-            let result = __BRYTHON__.run_script(document.getElementById("addto").text);
-            document.getElementById("result").innerText = "累加結果: " + result;
-        }
-</script>
-<p></p>
-<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
-<h1>w15</h1>
+<div id="result">題目二</div>
 <p><a href="https://gist.githubusercontent.com/40932134/fe4fd20c09cef264ddb6a64a082d3a83/raw/d6e1de3eefa191c47c7f3a3baa6b9bb30b052561/gistfile1.txt" onclick="run_addto()">addto</a> <!-- 這個連結將執行函式 --></p>
-<div id="result"></div>
-<!-- 顯示結果的區域 -->
-<p></p>
-<!-- Python 程式碼 -->
-<script type="text/python">
-# 定義 addto 函式
-        def addto(start, end):
-            total = 0
-            for i in range(start, end + 1):
-                total += i
-            return total
-
-        # 定義 run_addto 函式，這是點擊連結後執行的函式
-        def run_addto():
-            result = addto(1, 100)  # 執行加總從 1 到 100
-            print(result)  # 在控制台輸出結果
-            document["result"].text = f"從 1 累加到 100 的結果是：{result}"  # 顯示在頁面上
-</script>
-<script>
-// 用於初始化 Brython 以及執行程式碼的功能
-        function run_addto() {
-            // 執行 addto 函式並顯示結果
-            brython();  // 初始化 Brython
-            // 直接調用 Python 中的 run_addto 函式
-            __BRYTHON__.run_script('run_addto()');
-        }
-</script>
-<p></p>
-<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
-<h1>w15</h1>
+<div id="result">題目三</div>
 <p><a href="https://gist.githubusercontent.com/40932134/4a602d56724a3341a6e7949b15c2e109/raw/e876e4b03da3dff701625d04c37568ab9cf0ecde/gistfile1.txt" onclick="run_add_only_even()">add_only_even</a> <!-- 這個連結將執行函式 --></p>
-<div id="result"></div>
-<!-- 顯示結果的區域 -->
-<p></p>
-<!-- Python 程式碼 -->
-<script type="text/python">
-# 定義 add_only_even 函式
-        def add_only_even(start, end):
-            total = 0
-            # 迭代範圍內的每個數字
-            for i in range(start, end + 1):
-                if i % 2 == 0:  # 判斷是否為偶數
-                    total += i
-            return total
-
-        # 定義 run_add_only_even 函式，這是點擊連結後執行的函式
-        def run_add_only_even():
-            result = add_only_even(1, 100)  # 執行從 1 到 100 的偶數加總
-            print(result)  # 在控制台輸出結果
-            document["result"].text = f"從 1 累加到 100 之間的偶數總和是：{result}"  # 顯示在頁面上
-</script>
-<script>
-// 用於初始化 Brython 以及執行程式碼的功能
-        function run_add_only_even() {
-            // 執行 add_only_even 函式並顯示結果
-            brython();  // 初始化 Brython
-            // 直接調用 Python 中的 run_add_only_even 函式
-            __BRYTHON__.run_script('run_add_only_even()');
-        }
-</script>
-<p></p>
-<script src="https://cdn.jsdelivr.net/npm/brython@3.10.5/brython.min.js" type="text/javascript"></script>
-<h1>w15</h1>
+<div id="result">題目四</div>
 <p><a href="https://gist.githubusercontent.com/40932134/4761ba62b8c7854fd2874602f4e32282/raw/8f7711bac2c3677c7c1aaf08bed38342c6216d0b/gistfile1.txt" onclick="run_add_avoid_8()">add_avoid_8</a> <!-- 這個連結將執行函式 --></p>
 <div id="result"></div>
 <!-- 顯示結果的區域 -->
-<p></p>
+<h1>hw2_exam</h1>
 <!-- Python 程式碼 -->
 <script type="text/python">
 # 定義 add_avoid_8 函式
@@ -243,7 +170,7 @@ function run_addto() {
             // 直接調用 Python 中的 run_add_avoid_8 函式
             __BRYTHON__.run_script('run_add_avoid_8()');
         }
-    
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/wF337FWX5vw?si=YUDXD245cx03hz6K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>  
 <p></p>
 <p>// ]]&gt;</p>
 <p></p>
@@ -359,7 +286,7 @@ doc["add1to100"].bind('click', add)
 <p><!-- add 1 to 100 結束--></p>
 <!-- editor1 開始 -->
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
-<div id="kw_editor1" style="width: 600px; height: 300px;"></div>
+<div id="kw_editor1" style="width: 600px; height: 300px;">Exam2</div>
 <p><!-- 以下的表單與按鈕與前面的 Javascript doSave 函式以及 FileSaver.min.js 互相配合 --></p>
 <p><!-- 存擋表單開始 --></p>
 <form><label>Filename: <input id="kw_filename" placeholder="input file name" type="text"/>.py</label> <input onclick="doSave('kw_py_src1', 'kw_filename1');" type="submit" value="Save"/></form>
